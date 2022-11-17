@@ -11,7 +11,7 @@ class Name(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.CharField(max_length=200)
+    date = models.DateField(max_length=200)
     time = models.TimeField()
 
     def __str__(self):
