@@ -1,0 +1,1 @@
+web: gunicorn bodfitness.wsgi
