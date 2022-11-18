@@ -47,7 +47,7 @@
           </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Book a session</a>
-          <a class="dropdown-item" href="#">Bookings</a>
+          <a class="dropdown-item" href="#">My Bookings</a>
         <li class="nav-item">
           <a class="nav-link" href="#">Logout</a>
         </li>
@@ -63,6 +63,21 @@
         </li>
       </ul>
     </div>
-  </nav>
+</nav>
 
+<main class="flex-shrink-0 main-bg">
+    {% block content %}
+    <!-- Content Area -->
+    {% endblock content %}
+</main>
+
+
+<!-- Footer -->
+    <footer class="footer mt-auto py-3 dark-bg">
+        <p class="m-0 text-center text-white">Website designed by Joe Playdon</p>
+        <p class="m-0 text-center text-white">Follow me: 
+            <i class="fa-brands fa-facebook ms-4"></i>
+            <i class="fa-brands fa-instagram ms-4"></i>
+            <i class="fa-brands fa-github ms-4"></i></p>
+    </footer>
 </body>
