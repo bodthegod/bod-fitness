@@ -1,6 +1,4 @@
 from django.contrib import admin
-from .models import Name, Booking
-
-admin.site.register(Name)
+from .models import Booking
 
 admin.site.register(Booking)
