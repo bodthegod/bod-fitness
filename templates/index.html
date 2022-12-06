@@ -16,6 +16,7 @@
         type="date" 
         name="booking_date"
         required />
+        <script>datePicker.min = new Date().toISOString().split("T")[0];</script>
       <h2 class="text-black mt-2">Pick your advice topic</h2>
       <div class="mb-4">
           <select name="lifting" class="p-2" id="lifting">
