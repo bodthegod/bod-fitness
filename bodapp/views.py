@@ -6,25 +6,31 @@ from django.contrib import messages
 from .models import Booking
 from .forms import DateForm
 
+def index(request):
+    return render(request, "index.html",{})
+
 def booking(request):
-    #Calls allowedday function to show next two weeks of days
-    days = allowedDay(15)
+    daysfor = daysFor(15)
 
-    #Allows user to see unbooked days
-    availableDays = dayValidCheck(days)
-
+    availableDays = areDaysAvailable(daysfor)
 
     if request.method == 'POST':
         advice = request.POST.get('advice')
         choice = request.POST.get('choice')
-        date = request.POST.get('date')
+        if advice == None:
+            messages.success(request, "Select some Advice")
+            return redirect('booking')
+
+        if choice == None:
+            messages.success(request, "Select a Choice")
+            return redirect('booking')
+
+    # Stored user choices in django
+    request.session['advice'] = advice
+    request.session['choice'] = choice
+    request.session['date'] = date
+
+    return redirect('finaliseBooking')
 
 
 
-class HomeView(TemplateView):
-    template_name = 'base.html'
-
-
-class FormView(FormView):
-    form_class = DateForm
-    template_name = 'index.html'
