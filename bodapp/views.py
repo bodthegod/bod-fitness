@@ -80,3 +80,10 @@ def finaliseBooking(request):
 def daysFor(days):
     today = datetime.now()
     daysfor = []
+    for i in range (0, days):
+        x = today + timedelta(days=i)
+        y = x.strftime('%A')
+        if y == 'Saturday' or y == 'Sunday':
+            daysfor.append(x.strftime('%Y-%m-%d'))
+    return daysfor
+
