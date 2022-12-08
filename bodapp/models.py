@@ -16,15 +16,6 @@ BOOKING_CHOICE = (
 )
 
 
-
-
-class Name(models.Model):
-    name = models.CharField(max_length=30)
-
-    def __str__(self):
-        return self.user
-
-
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     advice = models.CharField(max_length=15, choices=ADVICE_TOPIC, default="Weight Gain")
