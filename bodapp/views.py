@@ -62,3 +62,16 @@ def finaliseBooking(request):
                         advice = advice,
                         choice = choice,
                         date = date,
+                    )
+                    messages.success(request, "Booking Made!")
+                    return redirect('index.html')
+                else:
+                    messages.success(request, "There are no more bookings available on this day.")
+            else:
+                messages.success(request, "This date is incorrect, please select a correct date.")
+        else:
+            messages.success(request, "Please select a choice.")
+    else:
+        messages.success(request, "Please select an advice topic.")
+
+    return render(request, 'bookingEntry.html', {})
