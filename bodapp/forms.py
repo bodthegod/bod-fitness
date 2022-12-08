@@ -8,4 +8,4 @@ class DateForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('name', 'date')
+        fields = ('date',)
