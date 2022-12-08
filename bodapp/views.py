@@ -75,3 +75,8 @@ def finaliseBooking(request):
         messages.success(request, "Please select an advice topic.")
 
     return render(request, 'bookingEntry.html', {})
+
+
+def daysFor(days):
+    today = datetime.now()
+    daysfor = []
