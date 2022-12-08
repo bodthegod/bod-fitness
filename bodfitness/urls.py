@@ -20,6 +20,9 @@ from bodapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomeView.as_view(), name='home'),
-    path('booking_form', views.FormView.as_view(), name='bookingform'),
+    path('booking', views.booking, name='booking'),
+    # path('', include('bodapp.urls'), name="home_url"),
+    # path('booking', include('bodapp.urls'), name='booking'),
+    # path('booking/', include('bodapp.urls')),
     path('accounts/', include('allauth.urls')),
 ]
