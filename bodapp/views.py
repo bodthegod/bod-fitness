@@ -51,4 +51,14 @@ def finaliseBooking(request):
 
     advice = request.session.get('advice')
     choice = request.session.get('choice')
-    date = request.session.get('day')
+    date = request.session.get('date')
+
+    if advice != None:
+        if choice != None:
+            if date <= topDate and date >= preDate:
+                if Booking.objects.filter(date=date).count() < 1:
+                    BookingForm = Booking.objects.get_or_create(
+                        user = user,
+                        advice = advice,
+                        choice = choice,
+                        date = date,
