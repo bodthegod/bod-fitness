@@ -2,56 +2,25 @@
 
 {% block content %}
 
-<div class="px-4 py-5 m-3 text-center">
-  <h1 class="display-5 fw-bold pb-2">BodFitness</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead"><strong><u>Book your personal training sessions using this:</strong></u></p>
-  </div>
-</div>
-<div class="row mt-1 p-2">
-  <h2 class="text-black text-center">Pick your session date</h2>
-  <form method="POST" action="/book-in/" class="text-center" id="confirmbooking">
-  <form method="POST" action="{% url 'booking' %}" class="text-center" id="confirmbooking">
-      <input 
-        id="datePicker"
-        type="date" 
-        name="booking_date"
-        required />
-        <script>datePicker.min = new Date().toISOString().split("T")[0];</script>
-      <h2 class="text-black mt-2">Pick your advice topic</h2>
-      <div class="mb-4">
-          <select name="lifting" class="p-2" id="lifting">
-              <option value="weightgain">Weight Gain</option>
-              <option value="weightloss">Weight Loss</option>
-              <option value="endurance">Endurance</option>
-              <option value="strengthgain">Strength Gain</option>
-          </select>
-        </div>
-      <div class="mb-4">
-        <h2> Online or in person?</h2>
-          <select name="session_type" class="p-2" id="session-type">
-              <option value="online">Online</option>
-              <option value="inperson">In Person</option>
-
-          </select>
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold pb-5">BodFitness</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 pb-5">This is BodFitness, my personal website where I offer 1 to 1, online personal training sessions.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        {% if user.is_authenticated %}
+        <a href="{% url 'booking' %}" class="btn btn-primary btn-lg px-4 gap-3">Book a session</a>
+        {% else %}
+        <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg px-4 gap-3">Register to book a session</a>
+        {% endif %}
       </div>
-      <button class="btn btn-primary btn-lg px-4 gap-3 mb-5">Confirm Booking</button>
-  </form>
-</div>
-</div>
-<!-- <div class="container-fluid">
-    <div class="row">
+    </div>
+  </div>
 
-        <div class="mx-auto" style="width: 200px;">
-            <input id="datepicker">
-
-            <script>
-              $(function () {
-                $("#datepicker").datepicker();
-              });
-            </script>
-        </div>
-    </div> -->
+  <div class="px-4 py-5 my-5 text-center">
+  <h2>I aspire to give my clients the best advice from my years of experience...</h2>
+  <p>This includes <strong>fast</strong> advice, <strong>passionate</strong> feedback and <strong>regular</strong> checkups
+     to see how <u>your fitness journey is going! </u> </p>
+  </div>
 
 </div>
 {%endblock%}
