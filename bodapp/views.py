@@ -37,7 +37,7 @@ def booking(request):
 
         return redirect('finaliseBooking')
 
-    return render(request, 'index.html', {
+    return render(request, 'booking.html', {
             'daysfor': daysfor,
             'availabledays': availableDays,
         })
