@@ -20,7 +20,7 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     advice = models.CharField(max_length=15, choices=ADVICE_TOPIC, default="Weight Gain")
     choice = models.CharField(max_length=15, choices=BOOKING_CHOICE, default="Online")
-    date = models.DateField(default=timezone.now)
+    date = models.DateField(default=datetime.now)
 
     def __str__(self):
         return f"{self.user.username} | date {self.date}"
