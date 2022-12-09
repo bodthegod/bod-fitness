@@ -20,6 +20,7 @@ def index(request):
 
 
 def booking(request):
+
     daysfor = daysFor(15)
 
     availableDays = areDaysAvailable(daysfor)
@@ -28,13 +29,6 @@ def booking(request):
         advice = request.POST.get('advice')
         choice = request.POST.get('choice')
         date = request.POST.get('date')
-        if advice == None:
-            messages.success(request, "Select some Advice")
-            return redirect('booking_form')
-
-        if choice == None:
-            messages.success(request, "Select a Choice")
-            return redirect('booking_form')
 
         # Stored user choices in django
         request.session['advice'] = advice
