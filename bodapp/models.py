@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
-from django.utils import timezone
+
 
 ADVICE_TOPIC = (
     ("Weight Gain", "Weight Gain"),
