@@ -7,14 +7,16 @@ from .models import *
 from .forms import DateForm
 
 
-class HomeView(TemplateView):
-    template_name = 'base.html'
-# def base(request):
-#     return render(request, 'bodfitness/base.html')
-class FormView(FormView):
-    template_name = 'index.html'
-# def index(request):
-#     return render(request, 'bodfitness/index.html', {})
+# class HomeView(TemplateView):
+# #    template_name = 'index.html'
+# #def base(request):
+# #    return render(request, 'bodfitness/base.html')
+
+
+# #class FormView(FormView):
+# #    template_name = 'booking.html'
+def index(request):
+    return render(request, 'index.html', {})
 
 
 def booking(request):
