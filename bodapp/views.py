@@ -22,6 +22,7 @@ def index(request):
 def booking(request):
 
     daysfor = daysFor(15)
+    daysfor = daysFor(7)
 
     availableDays = areDaysAvailable(daysfor)
 
@@ -47,7 +48,7 @@ def finaliseBooking(request):
     today = datetime.now()
     user = request.user
     preDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=15)
+    deltatime = today + timedelta(days=7)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     topDate = strdeltatime
 
@@ -55,10 +56,12 @@ def finaliseBooking(request):
     choice = request.session.get('choice')
     date = request.session.get('date')
 
+    if request.method == 'POST':
+        day = displayDay(date)
     if advice != None:
         if choice != None:
             if date <= topDate and date >= preDate:
-                if Booking.objects.filter(date=date).count() < 1:
+                if Booking.objects.filter(date=date).count() < 3:
                     BookingForm = Booking.objects.get_or_create(
                         user = user,
                         advice = advice,
@@ -82,10 +85,11 @@ def finaliseBooking(request):
 def daysFor(days):
     today = datetime.now()
     daysfor = []
-    for i in range (0, days):
+    for i in range(0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Saturday' or y == 'Sunday':
+        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday':
             daysfor.append(x.strftime('%Y-%m-%d'))
+    print(daysfor)
     return daysfor
 
