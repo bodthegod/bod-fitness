@@ -21,7 +21,6 @@ def index(request):
 
 def booking(request):
 
-    daysfor = daysFor(15)
     daysfor = daysFor(7)
 
     availableDays = areDaysAvailable(daysfor)
@@ -40,7 +39,7 @@ def booking(request):
 
     return render(request, 'booking.html', {
             'daysfor': daysfor,
-            'availabledays': availableDays,
+            'availableDays': availableDays,
         })
 
 
@@ -79,7 +78,13 @@ def finaliseBooking(request):
     else:
         messages.success(request, "Please select an advice topic.")
 
-    return render(request, 'bookingEntry.html', {})
+    return render(request, 'finalisebooking.html', {})
+
+
+def displayDay(x):
+    z = datetime.strptime(x, "%Y-%m-%d")
+    y = z.strftime('%A')
+    return y
 
 
 def daysFor(days):
