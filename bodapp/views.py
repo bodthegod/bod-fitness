@@ -60,7 +60,7 @@ def finaliseBooking(request):
     if advice != None:
         if choice != None:
             if date <= topDate and date >= preDate:
-                if Booking.objects.filter(date=date).count() < 3:
+                if Booking.objects.filter(date=date).count() < 1:
                     BookingForm = Booking.objects.get_or_create(
                         user = user,
                         advice = advice,
@@ -95,6 +95,12 @@ def daysFor(days):
         y = x.strftime('%A')
         if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday':
             daysfor.append(x.strftime('%Y-%m-%d'))
-    print(daysfor)
     return daysfor
 
+
+def areDaysAvailable(x):
+    availableDays = []
+    for d in x:
+        if Booking.objects.filter(date=d).count() < 1:
+            availableDays.append(d)
+    return availableDays
