@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import TemplateView, FormView
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from django.views import generic
 from django.contrib import messages
+from django.conf import settings
 from .models import *
-from .forms import DateForm
+from .forms import BookingForm
+from .contexts import *
 
 
 # class HomeView(TemplateView):
