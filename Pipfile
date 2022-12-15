@@ -27,6 +27,10 @@ dj-database-url = "*"
 cloudinary = "*"
 dj3-cloudinary-storage = "*"
 psycopg2 = "*"
+heroku = "*"
+datetime = "*"
+timedelta = "*"
+autopep8 = "*"
 
 [dev-packages]
 
