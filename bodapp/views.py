@@ -69,13 +69,18 @@ def finaliseBooking(request):
                         messages.success(request, "Booking Made!")
                         return redirect(reverse('finalise_booking', args=[booking.booking_number]))
                 else:
-                    messages.success(request, "There are no more bookings available on this day.")
+                    messages.success(
+                        request, "There are no more bookings available on this day.")
             else:
-                messages.success(request, "This date is incorrect, please select a correct date.")
+                messages.success(
+                    request, "This date is incorrect, please select a correct date.")
+            #     else:
+            #         messages.success(request, "Please select a choice.")
+            # else:
+            #     messages.success(request, "Please select an advice topic.")
         else:
-            messages.success(request, "Please select a choice.")
-    else:
-        messages.success(request, "Please select an advice topic.")
+            messages.error(request, 'This date is incorrect')
+
     daysfor = daysFor(7)
     availableDays = areDaysAvailable(daysfor)
 
