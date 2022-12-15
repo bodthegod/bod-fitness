@@ -61,6 +61,13 @@ def finaliseBooking(request):
                         "choice": request.POST.get('choice'),
                         "date": request.POST.get('date')
                     }
+
+                    booking_form = BookingForm(booking_data_submitted)
+                    if booking_form.is_valid():
+                        booking = booking_form.save(commit=False)
+                        booking.save()
+                        messages.success(request, "Booking Made!")
+                        return redirect(reverse('finalise_booking', args=[booking.booking_number]))
                 else:
                     messages.success(request, "There are no more bookings available on this day.")
             else:
