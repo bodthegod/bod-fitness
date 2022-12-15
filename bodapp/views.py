@@ -14,11 +14,6 @@ def index(request):
 
 
 def booking(request):
-
-    daysfor = daysFor(7)
-
-    availableDays = areDaysAvailable(daysfor)
-
     if request.method == 'POST':
         advice = request.POST.get('advice')
         choice = request.POST.get('choice')
@@ -28,14 +23,6 @@ def booking(request):
         request.session['advice'] = advice
         request.session['choice'] = choice
         request.session['date'] = date
-
-        return redirect('finaliseBooking')
-
-    return render(request, 'booking.html', {
-            'daysfor': daysfor,
-            'availableDays': availableDays,
-        })
-
 
 def finaliseBooking(request):
     today = datetime.now()
@@ -71,6 +58,13 @@ def finaliseBooking(request):
             messages.success(request, "Please select a choice.")
     else:
         messages.success(request, "Please select an advice topic.")
+    daysfor = daysFor(7)
+    availableDays = areDaysAvailable(daysfor)
+
+    return render(request, 'booking/booking.html', {'daysfor': daysfor,
+                                                    'availableDays': availableDays, })
+
+
 
     return render(request, 'finalisebooking.html', {})
 
