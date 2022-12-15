@@ -10,7 +10,7 @@ from .contexts import *
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'landing.html', {})
 
 
 def booking(request):

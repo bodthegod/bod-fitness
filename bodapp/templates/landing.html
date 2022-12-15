@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold pb-5">BodFitness</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 pb-5">This is BodFitness, my personal website where I offer 1 to 1, online personal training sessions.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        {% if user.is_authenticated %}
+        <a href="{% url 'booking' %}" class="btn btn-primary btn-lg px-4 gap-3">Book a session</a>
+        {% else %}
+        <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg px-4 gap-3">Register to book a session</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="px-4 py-5 my-5 text-center">
+  <h2>I aspire to give my clients the best advice from my years of experience...</h2>
+  <p>This includes <strong>fast</strong> advice, <strong>passionate</strong> feedback and <strong>regular</strong> checkups
+     to see how <u>your fitness journey is going! </u> </p>
+  </div>
+
+</div>
+{%endblock%}
