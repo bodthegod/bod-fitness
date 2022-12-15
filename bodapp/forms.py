@@ -9,3 +9,9 @@ class DateForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ('date',)
+
+
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ('user', 'advice', 'choice', 'date',)
