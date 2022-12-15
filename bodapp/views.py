@@ -32,24 +32,14 @@ def finaliseBooking(request):
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     topDate = strdeltatime
 
-    advice = request.session.get('advice')
-    choice = request.session.get('choice')
-    date = request.session.get('date')
+    # advice = request.session.get('advice')
+    # choice = request.session.get('choice')
+    # date = request.session.get('date')
 
     if request.method == 'POST':
         day = displayDay(date)
-    if advice != None:
-        if choice != None:
             if date <= topDate and date >= preDate:
                 if Booking.objects.filter(date=date).count() < 1:
-                    BookingForm = Booking.objects.get_or_create(
-                        user = user,
-                        advice = advice,
-                        choice = choice,
-                        date = date,
-                    )
-                    messages.success(request, "Booking Made!")
-                    return redirect('index.html')
                 else:
                     messages.success(request, "There are no more bookings available on this day.")
             else:
