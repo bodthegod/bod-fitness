@@ -38,8 +38,29 @@ def finaliseBooking(request):
 
     if request.method == 'POST':
         day = displayDay(date)
+
+        if day == 'Monday' or day == 'Tuesday' or day == 'Wednesday':
+            # if advice != None:
+            #     if choice != None:
             if date <= topDate and date >= preDate:
                 if Booking.objects.filter(date=date).count() < 1:
+                    print(request.POST.get('date'))
+                    booking_data_submitted = {
+                        "user": request.POST.get("user"),
+                        "advice": request.POST.get('advice'),
+                        "choice": request.POST.get('choice'),
+                        "date": request.POST.get('date')
+                    }
+                    request.session['booking_request'] = booking_data_submitted
+                    # BookingForm = Booking.objects.get_or_create(
+                    #   booking_data_submitted,
+                    # )
+                    booking_data_submitted = {
+                        "user": request.user,
+                        "advice": request.POST.get('advice'),
+                        "choice": request.POST.get('choice'),
+                        "date": request.POST.get('date')
+                    }
                 else:
                     messages.success(request, "There are no more bookings available on this day.")
             else:
