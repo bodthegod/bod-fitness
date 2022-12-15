@@ -24,7 +24,6 @@ def booking(request):
         request.session['choice'] = choice
         request.session['date'] = date
 
-def finaliseBooking(request):
     today = datetime.now()
     user = request.user
     preDate = today.strftime('%Y-%m-%d')
@@ -88,8 +87,13 @@ def finaliseBooking(request):
                                                     'availableDays': availableDays, })
 
 
+def finalise_booking(request, booking_number):
+    booking = get_object_or_404(Booking, booking_number=booking_number)
+    context = {
+        'booking': booking,
+    }
 
-    return render(request, 'finalisebooking.html', {})
+    return render(request, 'booking/finalisebooking.html', context)
 
 
 def displayDay(x):
