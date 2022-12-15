@@ -9,14 +9,6 @@ from .forms import BookingForm
 from .contexts import *
 
 
-# class HomeView(TemplateView):
-# #    template_name = 'index.html'
-# #def base(request):
-# #    return render(request, 'bodfitness/base.html')
-
-
-# #class FormView(FormView):
-# #    template_name = 'booking.html'
 def index(request):
     return render(request, 'index.html', {})
 
