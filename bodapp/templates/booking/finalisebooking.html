@@ -42,9 +42,9 @@
                   <p class="mb-0">Booking Advice</p>
               </div>
               <div class="col-12 col-md-6 text-md-end">
-                {% if booking.advice == 1 %}
+                  {% if booking.advice == 1 %}
                   <p class="mb-0 fw-bold">Weight Gain</p>
-                {% elif booking.advice == 2 %}
+                  {% elif booking.advice == 2 %}
                   <p class="mb-0 fw-bold">Weight Loss</p>
                   {% elif booking.advice == 3 %}
                   <p class="mb-0 fw-bold">Endurance</p>
@@ -53,6 +53,19 @@
                   {% endif %}
               </div>
           </div>
+
+          <div class="row mt-2">
+            <div class="col-12 col-md-6">
+                <p class="mb-0">Booking Choice</p>
+            </div>
+            <div class="col-12 col-md-6 text-md-end">
+                {% if booking.choice == 1 %}
+                <p class="mb-0 fw-bold">Online</p>
+                {% else %}
+                <p class="mb-0 fw-bold">In Person</p>
+                {% endif %}
+            </div>
+        </div>
 
 <div class="px-4 py-5 my-5 text-center">
 <a href="{% url 'index' %}" class="btn btn-primary btn-lg px-4 gap-3 mb-5">Take me back</a>
