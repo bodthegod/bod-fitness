@@ -3,15 +3,40 @@
 {% block content %}
 
 <div class="px-4 py-5 m-3 text-center">
-  <h1 class="display-5 fw-bold pb-2">BodFitness</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead"><strong><u>Book your personal training sessions using this:</strong></u></p>
-    </div>
+  <h1 class="display-5 fw-bold pb-2">Thank you for your booking, {{ booking.user }}.</h1>
 </div>
-<div class="row mt-1 p-2">
-  <h2 class="text-black text-center">You have booked in a session</h2>
-</div>
-  </div>
+<div class="container">
+  <hr>
+  <p class="text-center">Your booking information is below.
+      <strong>Thank you again</strong>.</p>
+  <hr>
+  <div class="row">
+      <div class="col-12">
+          <div class="finalise-booking-wrapper p-2">
+              <div class="row">
+                  <div class="col">
+                      <p class="fw-bold">Booking Info:</p>
+                  </div>
+              </div>
+
+              <div class="row mt-2">
+                  <div class="col-12 col-md-6">
+                      <p class="mb-0">Booking Number</p>
+                  </div>
+                  <div class="col-12 col-md-6 text-md-end">
+                      <p class="mb-0 fw-bold">{{ booking.booking_number }}</p>
+                  </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-12 col-md-6">
+                    <p class="mb-0">Booking Date</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0 fw-bold">{{ booking.date }}</p>
+                </div>
+            </div>
+
 <div class="px-4 py-5 my-5 text-center">
 <a href="{% url 'index' %}" class="btn btn-primary btn-lg px-4 gap-3 mb-5">Take me back</a>
 </div>
