@@ -136,6 +136,28 @@ def created_bookings(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def booking_detail(request, booking_number):
+    """
+    Shows booking details
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, you don't have access to this \
+            part of the site.")
+        return redirect(reverse('index'))
+
+    booking = get_object_or_404(Booking,
+                                booking_number=booking_number)
+
+    template = 'booking/finalisebooking.html'
+    context = {
+        'booking': booking,
+        'admin': True,
+    }
+    return render(request, template, context)
+
 def displayDay(x):
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')
