@@ -158,6 +158,25 @@ def booking_detail(request, booking_number):
     }
     return render(request, template, context)
 
+
+@login_required
+def delete_booking(request, booking_number):
+    """
+    Allows for booking deletion
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, you don't have access to this \
+            part of the site.")
+        return redirect(reverse('index'))
+
+    booking = get_object_or_404(Booking,
+                                booking_number=booking_number)
+    booking.delete()
+    messages.info(request, f'Booking with booking number {booking_number}\
+         has been successfully deleted.')
+    return redirect('created_bookings')
+
+
 def displayDay(x):
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')
