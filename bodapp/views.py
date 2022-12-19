@@ -85,8 +85,12 @@ def booking(request):
     daysfor = daysFor(7)
     availableDays = areDaysAvailable(daysfor)
 
+    booking_available = False if availableDays is None or len(
+        availableDays) is 0 else True
+
     return render(request, 'booking/booking.html', {'daysfor': daysfor,
-                                                    'availableDays': availableDays, })
+                                                    'availableDays': availableDays,
+                                                    'booking_available': booking_available, })
 
 
 def finalise_booking(request, booking_number):
