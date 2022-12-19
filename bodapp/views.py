@@ -4,6 +4,8 @@ from datetime import datetime, timedelta
 from django.views import generic
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
+
 from .models import *
 from .forms import BookingForm
 from .contexts import *
@@ -96,6 +98,44 @@ def finalise_booking(request, booking_number):
     return render(request, 'booking/finalisebooking.html', context)
 
 
+@login_required
+def created_bookings(request):
+    """
+    Page to view bookings
+    """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, you don't have access to this \
+            part of the site.")
+        return redirect(reverse('index'))
+
+    bookings = Booking.objects.all()
+
+    past_bookings = []
+    upcoming_bookings = []
+    bookings_today = []
+
+    for booking in bookings:
+        if booking.date < datetime.today().date():
+            if booking not in past_bookings:
+                past_bookings.append(booking)
+        elif booking.date > datetime.today().date():
+            if booking not in upcoming_bookings:
+                upcoming_bookings.append(booking)
+
+    for booking in bookings:
+        if booking.date == datetime.today().date():
+            if booking not in bookings_today:
+                bookings_today.append(booking)
+
+    template = 'booking/createdbookings.html'
+    context = {
+        "bookings": bookings,
+        "past_bookings": past_bookings,
+        "upcoming_bookings": upcoming_bookings,
+        "bookings_today": bookings_today,
+    }
+
+    return render(request, template, context)
 def displayDay(x):
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')

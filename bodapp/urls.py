@@ -6,4 +6,6 @@ urlpatterns = [
     path('booking', views.booking, name='booking'),
     path('finalise_booking/<booking_number>',
          views.finalise_booking, name='finalise_booking'),
+    path('created_bookings',
+         views.created_bookings, name='created_bookings'),
 ]
