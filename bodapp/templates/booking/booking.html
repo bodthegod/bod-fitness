@@ -19,8 +19,8 @@
           {% if not booking_available %}
           <option value="No days available">No days available</option>
           {% else %}
-          {% for availableDay in availableDays  %}
-          <option value="{{availableDay}}">{{availableDay}}</option>
+          {% for day in available_days  %}
+          <option value="{{day}}">{{day}}</option>
           {% endfor %}
           {% endif %}
       </select>

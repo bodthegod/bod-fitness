@@ -82,18 +82,22 @@ def booking(request):
         else:
             messages.error(request, 'This date is incorrect')
 
-    daysfor = daysFor(7)
-    availableDays = areDaysAvailable(daysfor)
+    daysfor = days_for(7)
+    available_days = are_days_available(daysfor)
 
-    booking_available = False if availableDays is None or len(
-        availableDays) is 0 else True
+    booking_available = False if available_days is None or len(
+        available_days) == 0 else True
 
     return render(request, 'booking/booking.html', {'daysfor': daysfor,
-                                                    'availableDays': availableDays,
+                                                    'available_days': available_days,
                                                     'booking_available': booking_available, })
 
 
 def finalise_booking(request, booking_number):
+    """
+    Finalise booking function
+    """
+
     booking = get_object_or_404(Booking, booking_number=booking_number)
     context = {
         'booking': booking,
@@ -187,7 +191,7 @@ def displayDay(x):
     return y
 
 
-def daysFor(days):
+def days_for(days):
     today = datetime.now()
     daysfor = []
     for i in range(0, days):
@@ -198,9 +202,9 @@ def daysFor(days):
     return daysfor
 
 
-def areDaysAvailable(x):
-    availableDays = []
+def are_days_available(x):
+    available_days = []
     for d in x:
         if Booking.objects.filter(date=d).count() < 1:
-            availableDays.append(d)
-    return availableDays
+            available_days.append(d)
+    return available_days
