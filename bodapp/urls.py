@@ -10,4 +10,8 @@ urlpatterns = [
          views.created_bookings, name='created_bookings'),
     path('booking_detail/<booking_number>',
          views.booking_detail, name='booking_detail'),
+    path('delete_booking/<booking_number>',
+         views.delete_booking, name='delete_booking'),
+    path('account_panel', views.account_panel, name='account_panel'),
+
 ]
