@@ -106,6 +106,44 @@ def finalise_booking(request, booking_number):
     return render(request, 'booking/finalisebooking.html', context)
 
 
+def account_panel(request):
+    """
+    Show only user specific bookings
+    """
+    if request.user.is_authenticated:
+        bookings = Booking.objects.all()
+
+    user = request.user
+    bookings = Booking.objects.filter(user=user)
+    past_bookings = []
+    upcoming_bookings = []
+    bookings_today = []
+
+    for booking in bookings:
+        if booking.date < datetime.today().date():
+            if booking not in past_bookings:
+                past_bookings.append(booking)
+        elif booking.date > datetime.today().date():
+            if booking not in upcoming_bookings:
+                upcoming_bookings.append(booking)
+
+    for booking in bookings:
+        if booking.date == datetime.today().date():
+            if booking not in bookings_today:
+                bookings_today.append(booking)
+
+    template = 'booking/userbookingsview.html'
+    context = {
+        "bookings": bookings,
+        "past_bookings": past_bookings,
+        "upcoming_bookings": upcoming_bookings,
+        "bookings_today": bookings_today,
+        'user': user,
+    }
+
+    return render(request, template, context)
+
+
 @login_required
 def created_bookings(request):
     """
@@ -115,8 +153,9 @@ def created_bookings(request):
         messages.error(request, "Sorry, you don't have access to this \
             part of the site.")
         return redirect(reverse('index'))
-
-    bookings = Booking.objects.all()
+    if request.user.is_authenticated:
+        bookings = Booking.objects.all()
+    # bookings = Booking.objects.filter(user=request.user).first()
 
     past_bookings = []
     upcoming_bookings = []
