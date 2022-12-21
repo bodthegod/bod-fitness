@@ -31,6 +31,7 @@ heroku = "*"
 datetime = "*"
 timedelta = "*"
 autopep8 = "*"
+gunicorn = "*"
 
 [dev-packages]
 
