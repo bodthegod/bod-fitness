@@ -68,7 +68,11 @@
         </div>
 
 <div class="px-4 py-5 my-5 text-center">
-<a href="{% url 'created_bookings' %}" class="btn btn-primary btn-lg px-4 gap-3 mb-5">My Bookings</a>
+{% if user.is_superuser %}
+<a href="{% url 'created_bookings' %}" class="btn btn-primary btn-lg px-4 gap-3 mb-5">All Bookings</a>
+{% else %}
+<a href="{% url 'account_panel' %}" class="btn btn-primary btn-lg px-4 gap-3 mb-5">My Bookings</a>
+{% endif %}
 <a href="{% url 'index' %}" class="btn btn-secondary btn-lg px-4 gap-3 mb-5">Take me back</a>
 </div>
 {%endblock%}
