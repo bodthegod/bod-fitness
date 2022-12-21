@@ -12,10 +12,16 @@ from .contexts import *
 
 
 def index(request):
+    """
+    Renders landing page
+    """
     return render(request, 'landing.html', {})
 
 
 def booking(request):
+    """
+    Function for booking
+    """
     if request.method == 'POST':
         advice = request.POST.get('advice')
         choice = request.POST.get('choice')
@@ -33,16 +39,10 @@ def booking(request):
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     topDate = strdeltatime
 
-    # advice = request.session.get('advice')
-    # choice = request.session.get('choice')
-    # date = request.session.get('date')
-
     if request.method == 'POST':
         day = displayDay(date)
 
         if day == 'Monday' or day == 'Tuesday' or day == 'Wednesday':
-            # if advice != None:
-            #     if choice != None:
             if date <= topDate and date >= preDate:
                 if Booking.objects.filter(date=date).count() < 1:
                     print(request.POST.get('date'))
@@ -53,9 +53,6 @@ def booking(request):
                         "date": request.POST.get('date')
                     }
                     request.session['booking_request'] = booking_data_submitted
-                    # BookingForm = Booking.objects.get_or_create(
-                    #   booking_data_submitted,
-                    # )
                     booking_data_submitted = {
                         "user": request.user,
                         "advice": request.POST.get('advice'),
@@ -75,10 +72,6 @@ def booking(request):
             else:
                 messages.success(
                     request, "This date is incorrect, please select a correct date.")
-            #     else:
-            #         messages.success(request, "Please select a choice.")
-            # else:
-            #     messages.success(request, "Please select an advice topic.")
         else:
             messages.error(request, 'This date is incorrect')
 
@@ -155,7 +148,6 @@ def created_bookings(request):
         return redirect(reverse('index'))
     if request.user.is_authenticated:
         bookings = Booking.objects.all()
-    # bookings = Booking.objects.filter(user=request.user).first()
 
     past_bookings = []
     upcoming_bookings = []
@@ -190,13 +182,13 @@ def booking_detail(request, booking_number):
     """
     Shows booking details
     """
-    if not request.user.is_superuser:
-        messages.error(request, "Sorry, you don't have access to this \
-            part of the site.")
-        return redirect(reverse('index'))
-
-    booking = get_object_or_404(Booking,
-                                booking_number=booking_number)
+    # if not request.user.is_superuser:
+    #     messages.error(request, "Sorry, you don't have access to this \
+    #         part of the site.")
+    #     return redirect(reverse('index'))
+    if request.user.is_authenticated:
+        booking = get_object_or_404(Booking,
+                                    booking_number=booking_number)
 
     template = 'booking/finalisebooking.html'
     context = {
@@ -211,26 +203,32 @@ def delete_booking(request, booking_number):
     """
     Allows for booking deletion
     """
-    if not request.user.is_superuser:
-        messages.error(request, "Sorry, you don't have access to this \
-            part of the site.")
-        return redirect(reverse('index'))
+    # if not request.user.is_superuser:
+    #     messages.error(request, "Sorry, you don't have access to this \
+    #         part of the site.")
+    #     return redirect(reverse('index'))
 
     booking = get_object_or_404(Booking,
                                 booking_number=booking_number)
     booking.delete()
     messages.info(request, f'Booking with booking number {booking_number}\
          has been successfully deleted.')
-    return redirect('created_bookings')
+    return redirect('account_panel')
 
 
 def displayDay(x):
+    """
+    Function to return string of datetime
+    """
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')
     return y
 
 
 def days_for(days):
+    """
+    Function to return the next monday, tuesday or wednesday within the next week
+    """
     today = datetime.now()
     daysfor = []
     for i in range(0, days):
@@ -242,6 +240,9 @@ def days_for(days):
 
 
 def are_days_available(x):
+    """
+    Checks if days are available for booking
+    """
     available_days = []
     for d in x:
         if Booking.objects.filter(date=d).count() < 1:
