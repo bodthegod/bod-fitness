@@ -3,6 +3,9 @@ from .models import *
 
 
 class BookingAdmin(admin.ModelAdmin):
+    """
+    Class for admin to see all fields for a user
+    """
 
     readonly_fields = ('booking_number',)
 

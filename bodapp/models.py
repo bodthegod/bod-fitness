@@ -1,23 +1,15 @@
 import uuid
-from django.db import models
 from datetime import datetime
+from django.db import models
 from django.contrib.auth.models import User
 
 
-# ADVICE_TOPIC = (
-#     ("Weight Gain", "Weight Gain"),
-#     ("Weight Loss", "Weight Loss"),
-#     ("Endurance", "Endurance"),
-#     ("Strength Gain", "Strength Gain"),
-# )
-
-# BOOKING_CHOICE = (
-#     ("Online", "Online"),
-#     ("In Person", "In Person"),
-# )
-
-
 class Booking(models.Model):
+    """
+    Model for Bookings, all choices 
+    and date options with generated 
+    booking number
+    """
     booking_number = models.CharField(
         max_length=32, null=False, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
