@@ -65,13 +65,16 @@ def booking(request):
                         booking = booking_form.save(commit=False)
                         booking.save()
                         messages.success(request, "Booking Made!")
-                        return redirect(reverse('finalise_booking', args=[booking.booking_number]))
+                        return redirect(reverse('finalise_booking',
+                                                args=[booking.booking_number]))
                 else:
                     messages.success(
-                        request, "There are no more bookings available on this day.")
+                        request,
+                        "There are no more bookings available on this day.")
             else:
                 messages.success(
-                    request, "This date is incorrect, please select a correct date.")
+                    request,
+                    "This date is incorrect, please select a correct date.")
         else:
             messages.error(request, 'This date is incorrect')
 
@@ -82,8 +85,10 @@ def booking(request):
         available_days) == 0 else True
 
     return render(request, 'booking/booking.html', {'daysfor': daysfor,
-                                                    'available_days': available_days,
-                                                    'booking_available': booking_available, })
+                                                    'available_days':
+                                                    available_days,
+                                                    'booking_available':
+                                                    booking_available, })
 
 
 def finalise_booking(request, booking_number):
@@ -227,7 +232,7 @@ def displayDay(x):
 
 def days_for(days):
     """
-    Function to return the next monday, tuesday or wednesday within the next week
+    Function to return the next mon, tues or wed within the next week
     """
     today = datetime.now()
     daysfor = []
