@@ -26,6 +26,7 @@
                                             <th scope="col">Advice</th>
                                             <th scope="col">Choice</th>
                                             <th scope="col">Delete Booking?</th>
+                                            <th scope="col">Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -56,6 +57,7 @@
                                             <td><a href="{% url 'delete_booking' booking %}" data-toggle="modal" data-target="{{booking}}"
                                                     aria-label="Open delete booking modal" class="bookings-links"><i
                                                         class="fas fa-trash-alt"></i></a></td>
+                                            <td>{{ booking.date }}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
@@ -85,6 +87,7 @@
                                             <th scope="col">Advice</th>
                                             <th scope="col">Choice</th>
                                             <th scope="col">Delete Booking?</th>
+                                            <th scope="col">Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,6 +118,7 @@
                                             <td><a href="{% url 'delete_booking' booking %}" data-toggle="modal" data-target="{{booking}}"
                                                     aria-label="Open delete booking modal" class="bookings-links"><i
                                                         class="fas fa-trash-alt"></i></a></td>
+                                            <td>{{ booking.date }}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
@@ -144,6 +148,7 @@
                                             <th scope="col">Advice</th>
                                             <th scope="col">Choice</th>
                                             <th scope="col">Delete Booking?</th>
+                                            <th scope="col">Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -174,6 +179,7 @@
                                             <td><a href="{% url 'delete_booking' booking %}" data-bs-toggle="modal" data-bs-target="{{booking}}"
                                                     aria-label="Open delete booking modal" class="bookings-links"><i
                                                         class="fas fa-trash-alt"></i></a></td>
+                                            <td>{{ booking.date }}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
