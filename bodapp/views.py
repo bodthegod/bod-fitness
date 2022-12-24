@@ -18,6 +18,7 @@ def index(request):
     return render(request, 'landing.html', {})
 
 
+@login_required
 def booking(request):
     """
     Function for booking
