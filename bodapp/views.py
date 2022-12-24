@@ -40,7 +40,7 @@ def booking(request):
     topDate = strdeltatime
 
     if request.method == 'POST':
-        day = displayDay(date)
+        day = display_day(date)
 
         if day == 'Monday' or day == 'Tuesday' or day == 'Wednesday':
             if date <= topDate and date >= preDate:
@@ -187,10 +187,6 @@ def booking_detail(request, booking_number):
     """
     Shows booking details
     """
-    # if not request.user.is_superuser:
-    #     messages.error(request, "Sorry, you don't have access to this \
-    #         part of the site.")
-    #     return redirect(reverse('index'))
     if request.user.is_authenticated:
         booking = get_object_or_404(Booking,
                                     booking_number=booking_number)
@@ -208,11 +204,6 @@ def delete_booking(request, booking_number):
     """
     Allows for booking deletion
     """
-    # if not request.user.is_superuser:
-    #     messages.error(request, "Sorry, you don't have access to this \
-    #         part of the site.")
-    #     return redirect(reverse('index'))
-
     booking = get_object_or_404(Booking,
                                 booking_number=booking_number)
     booking.delete()
@@ -221,7 +212,7 @@ def delete_booking(request, booking_number):
     return redirect('account_panel')
 
 
-def displayDay(x):
+def display_day(x):
     """
     Function to return string of datetime
     """
