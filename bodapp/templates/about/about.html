@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold pb-5">Why Me?</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 pb-5">I have been training for the last 4 years, and I really enjoy seeing progress and development in people.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        {% if user.is_authenticated %}
+        <a href="{% url 'booking' %}" class="btn btn-primary btn-lg px-4 gap-3">Book a session</a>
+        {% else %}
+        <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg px-4 gap-3">Register to book a session</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="px-4 py-5 my-5 text-center">
+  <h2>I aspire to give my clients the best advice from my years of experience...</h2>
+  <p class="lead m-5">For the past five years of my life, I have dedicated every moment I have free to devote it
+    to improving my fitness, personal health and strength within the gym.</p><p> I find that it is one of the most
+    rewarding and important things to do, even if that is devoting 45 minutes a day in order to keep yourself
+    feeling good.</p>
+  </div>
+
+</div>
+
+{%endblock%}
