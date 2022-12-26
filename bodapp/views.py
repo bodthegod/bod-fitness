@@ -18,6 +18,13 @@ def index(request):
     return render(request, 'landing.html', {})
 
 
+def about(request):
+    """
+    Renders landing page
+    """
+    return render(request, 'about/about.html', {})
+
+
 @login_required
 def booking(request):
     """
