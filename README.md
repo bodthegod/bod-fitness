@@ -1,108 +1,489 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+<h1 align="center">Bod Fitness Personal Training Booking Website - Project Portfolio 4</h1>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![GitHub last commit](https://img.shields.io/github/last-commit/bodthegod/bod-fitness?color=blue&style=for-the-badge)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![GitHub contributors](https://img.shields.io/github/contributors/bodthegod/bod-fitness?color=green&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/bodthegod/bod-fitness?color=orange&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/bodthegod/bod-fitness?color=brown&style=for-the-badge)
+## - By Joe Playdon
 
-## Gitpod Reminders
+### [View the live project here](https://bodfitness.herokuapp.com/) #
+### [View the repository here](https://github.com/bodthegod/bod-fitness) #
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Table of Contents:
+1. [About the project](#about-my-website)
+    1. [First Time Visitor Goals](#first-time-visitor-goals)
+    2. [Returning and Frequent Visitor Goals](#returning-visitor-goals)
+2. [Design](#design)
+    1. [Colour Scheme](#colour-scheme)
+    2. [Typography](#typography)
+    3. [Imagery](#imagery)
+	4. [Wireframes](#wireframes)
+	5. [Features](#features)
+    6. [Features Importance Table](#features-importance-table)
+    7. [Screenshots of Features](#screenshots-and-features-within-website)
+    8. [Structure](#structure)
+3. [Languages and Resources](#languages-used)
+4. [Techologies Used](#technologies-used)
+5. [Testing](#testing)
+    1. [HTML Validator Results](#html-results)
+    2. [CSS Validator Results](#css-results)
+    3. [Lighthouse Reports](#lighthouse-reports)
+    4. [Further Testing](#further-testing)
+    5. [Manual Testing](#manual-testing)
+6. [Bugs and fixes](#known-bugs)
+7. [Deployment](#deployment)
+    1. [Heroku](#heroku)
+    2. [Forking Repository](#forking-the-github-repository)
+    3. [Making A Local Clone](#making-a-local-clone)
+8. [Credits](#credits)
+    
 
-`python3 -m http.server`
+![Website Designs](/readmeimages/readmepreview.PNG)</h2>
 
-A blue button should appear to click: _Make Public_,
+### About my website
 
-Another blue button should appear to click: _Open Browser_.
+This is my personal training booking website, where users can select dates of which they want to book a session with different advice choices.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+## User Experience (UX)
 
-Another blue button should appear to click: _Open Browser_.
+-   ### User stories
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    -   #### First Time Visitor Goals
 
-To log into the Heroku toolbelt CLI:
+        1. As a First Time Visitor, I want to be able to easily navigate the website, and register an account. 
+        2. As a First Time Visitor, I want a simple and easy and UI that is fully functional and gives me the choice to book a session once logged in. 
+        3. As a First Time Visitor, I want to see the dates that are available for personal training sessions.
+        4. When visiting the website for the first time, I want to be able to book a session and view my bookings easily.
+        5. Any First time user would like to check when their bookings are for, easily accessed by a dropdown menu.
+        6. As a first Time Visitor, I want the process of booking a session to be as intuitive as possible.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    -   #### Returning Visitor Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+        1. As a Returning Visitor, I want to be able to easily login. 
+        2. As a Returning Visitor, I want to be able to view my upcoming sessions.
+        3. As a Returning Visitor, I want a simple UI that is easy to navigate and easy on the eye.
+        4. As a Returning Visitor, I want the ability to logout.
+        5. As a Returning Visitor, I would like to view social links.
 
-------
+    -   #### Frequent User Goals
 
-## Release History
+        1. As a Frequent User, I want the website to remember my details so that I can login. 
+        2. As a Frequent User, I want to be able to check my previous bookings and future bookings. 
+        3. As a Frequent User, I want the creator of my website to be able to see when I am booked in for. 
+        4. As a Frequent User, I want the booking process to be as easy as possible. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+    -   ### Design
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+    -   #### Colour Scheme
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+        -   The main colours in the frontpage I have used are light grey for the navbar, to give a slight shade to imply to the user where the top of the page is- keeping the overall theme of the website very sleek and simple. Within my navbar, the title of the website is in black and a bold font choice, to maintain heirarchy on the page and the nav text is grey to keep it easy on the eye. For the headers and text, I have used the colour #303030 which is a common colour choice within UI designers to prevent eye strain against a white background, yet again making my website easier on the eye. I have used a consistent colour scheme throughout every page of my website, and a simple blue colour (#0d6efd) for the majority of buttons to show emphasis to a user. Finally- I have used a sleek #212529 (dark grey) for the footer, which is displayed across all pages- the text inside the footer is in white, and the social links displayed in the same blue as the buttons (#0d6efd) purely to keep the styling and imagery consistent. I enjoy looking at the front page because it is very easy to understand what the website is for and how to go about using it.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+        Furthermore, for the login page I have used the #303030 colour for the heading and text, the same blue from the inital buttons (#0d6efd) for the "Sign In" button and this blue colour inherited for the "register an account" anchor tag.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+        Moreover, for the register page I have used the same colours inherited from the login page, however the "Sign Up" button is green (#198754) to signify a positive change to the user when submitting the register form. Yet again, the anchor tag to redirect a user to the "sign in" page is in blue.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+        Finally, in terms of the authentication section of my website, the logout section uses the same styles as the previous login/register pages- however a red colour (#dc3545) is used to display to the user that this action will have an impact on the login status, and log them out. Throughout all pages this colour scheme is consistent and it completes the user experience.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    -   #### Typography
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+        -   I have chose the Space Grotesk font as the main font used within all of my website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site from the external link. Space Grotesk is a nice font choice for a modern and simple website, and I had looked around on UI design websites for good font choices, allowing me to choose this. This is very appropriate for my website as it is easy to read, bold and attractive to view. I have kept this font choice throughout my website to keep the styling consistent and familiar.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    -   #### Imagery
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+        -   I did not feel as if it was necessary to use any external images within my website, to keep it simple and easy on the eye. I feel as if adding images to this would add too much clutter and cause an overload for the user, so I kept it simple and stuck to text and intuitive buttons. I personally feel from a user standpoint images would take away from the simplicity of booking personal training sessions. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    *   ### Wireframes
+        
+    -   I have used [Balsamiq Wireframes](https://balsamiq.com/) as my desired wireframing tool for my website, as it is very easy to use. However, due to these being wireframes, the final image of the website may be depicted differently yet these are base guidelines of my website, and the image I would like to achieve. Here I have created Home page, Register page, Booking and finalise booking page, Sign in, Sign out, My bookings and Admin bookings wireframes. I have made wireframes for both mobile and desktop views of the website.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    -   Home Page Desktop Wireframe - [View](/readmeimages/wireframes/home-page-desktop.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    -   Home Page Mobile Wireframe - [View](/readmeimages/wireframes/home-page-mobile.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    -   Register Page Desktop Wireframe - [View](/readmeimages/wireframes/register-desktop.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.png)
 
-------
+    -   Login Page Desktop Wireframe - [View](/readmeimages/wireframes/signin-desktop.png)
 
-## FAQ about the uptime script
+    -   Login Page Mobile Wireframe - [View](/readmeimages/wireframes/signin-mobile.png)
 
-**Why have you added this script?**
+    -   Logout Page Desktop Wireframe - [View](/readmeimages/wireframes/sign-out-desktop.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    -   Logout Page Mobile Wireframe - [View](/readmeimages/wireframes/sign-out-mobile.png)
 
-**How will this affect me?**
+    -   Register Page Desktop Wireframe - [View](./readmeimages/wireframes/register-desktop.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.png
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    -   Booking Page Desktop Wireframe - [View](/readmeimages/wireframes/booking-page-desktop.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    -   Booking Page Mobile Wireframe - [View](/readmeimages/wireframes/booking-page-mobile.png)
 
-**So….?**
+    -   Finalise Booking Page Desktop Wireframe - [View](/readmeimages/wireframes/finalise-booking-desktop.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    -   Finalise Booking Page Mobile Wireframe - [View](/readmeimages/wireframes/finalise-booking-mobile.png)
 
-**Can I opt out?**
+    -   My Bookings Page Desktop Wireframe - [View](/readmeimages/wireframes/my-bookings-desktop.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    -   My Bookings Page Mobile Wireframe - [View](/readmeimages/wireframes/my-bookings-mobile.png)
+
+    -   All Bookings (admin) Page Desktop Wireframe - [View](/readmeimages/wireframes/admin-bookings-desktop.png)
+
+    -   All Bookings (admin) Page Mobile Wireframe - [View](/readmeimages/wireframes/admin-bookings-mobile.png)
+
+    -   Why Us Page Desktop Wireframe - [View](/readmeimages/wireframes/whyus-desktop.png)
+
+    -   Why Us Page Mobile Wireframe - [View](/readmeimages/wireframes/whyus-mobile.png)
+
+
+    ## Features
+
+-   Home page with "Register" button on front page, allows the user to instantly have a link to the main function of the website (creating an account to book sessions). When user is authenticated, the home page button changes to "Book a session"
+
+-   Nav bar with content that changes depending on if the user is authenticated, options changing from "Register" and "Login" when not authenticated to a "Bookings" dropdown menu with options being "Book a session" and "My Bookings". If user logged in is a superuser, "My Bookings" changes to "All Bookings", allowing for the admin to have a frontend view of every booking. "Logout" is also shown when the user is authenticated, to signify to the user that they are currently logged in.
+
+-   Booking page, allowing for the next monday, tuesday and wednesday within the next 7 days to be displayed. If a day is already booked, the python function will remove this day from being displayed to the user so that there is no confusion about what days are booked. The user can also select from multiple advice topics, and choose wether the session is in person/online. When all 3 days are booked, the website displays "no days available" within the "select your day" dropdown menu, and I have set the confirm booking button to disabled when there are no days available. This prevents confusion to the user- and is good UI practice when developing a system like this.
+
+-   Once a user books in a session, they are shown the finalise booking screen, which displays to the user all the options they had chosen, including the unique booking number, and the date that they have selected. From this page, there is a button that is displayed to allow the user to go to their bookings, or to take the user back to the previous page. 
+
+-   If the user selects the button that redirects them to the "My bookings" page, this is where they can Read, Update or Delete their created records that were added to the database.
+
+
+### Features Importance Table
+
+When first implementing the features for this website, I had brainstormed ideas and the importance that they would have on the User Experience when browsing my website, this is a brief features importance table:
+
+| # | Feature | Importance | Viability |
+| --- | --- | --- | --- |
+| 1 | Create, View, Update and Delete Bookings | 5 | 5 |
+| 2 | Login, Logout and Register Functionality | 5 | 5 |
+| 3 | View My Bookings as a User | 5 | 5 |
+| 4 | View All Bookings as an Admin | 5 | 5 |
+| 5 | Create a "Why Me" Page | 3 | 2 |
+| 6 | Require User Authentication for Bookings | 5 | 5 |
+| 7 | Edit content if User is Superuser | 4 | 4 |
+| 8 | Refine UI Designs | 3 | 2 |
+| 9 | Validation of User Data | 5 | 5 |
+| 10 | Create, View, Update and Delete User Accounts | 5 | 5 |
+| 11 | Payment System for Bookings | 3 | 2 |
+| 12 | Live Chat for Advice | 1 | 1 |
+
+After analysing my table, I had decided to create a limited number of these features due to time constraints. The features I added were (1, 2, 3, 4, 5, 6, 7, and 9).
+
+## Structure
+### Flow Diagrams
+Within my flow diagrams, I have annotated the layers of authentication for the user role within the website.
+
+- The why me page is available to all users, and login and register are also available for all users, including unregistered accounts. 
+
+- Once an account has been logged into or created, the nav bar elements will change based upon if the user is authenticated. The elements allow a user to create bookings, view their bookings and logout of their account. 
+
+- If a user decides to view their bookings, this will only show them entries within the database regarding their user account. If a superuser is logged in, this button will show the admin all entries within the database. 
+
+#### Unregistered User
+![Unregistered User's Flow](/readmeimages/unregister-user-flow.png)
+
+#### Registered User
+![Registered User's Flow](/readmeimages/registered-user-flow.png)
+
+#### Superuser
+![Superuser's Flow](/readmeimages/superuser-flow.png)
+
+### **CRUD TABLE**
+This shows what CRUD functionality is available from each page
+| Page | Create | Read | Update | Delete |
+| --- | --- | --- | --- | --- |
+| home |  | basic information regarding what the website is for |  |  |
+| booking | create booking with choices and booking number | view available dates for bookings, choose advice topic and online or in person |  |  |
+| finalise_booking |  | displays all booking information to user |  |  |
+| account_panel |  | view all booking data for current user | edit booking data | delete selected booking from database |
+| created_booking |  | requires superuser, view all booking data for all users (admin panel) | edit booking data | delete any booking from database |
+| register | user profile |  |  |  |
+| login |  | login with username and password |   |  |  |
+
+
+### Defensive Programming
+In order to keep my website secure and effective at keeping malicious attempts prevented, I implemented features alongside my project development to prevent this.
+- I had used @login_required on functions and page renders that required a user to be logged in. 
+- I used jinja templating like `{% if user.is_authenticated %}` and `{% if user.is_superuser %}` to enforce a specific user flow when navigating my website.
+- The routes functionalities within my urls file also checks if a user is:
+    * authenticated (logged in)
+    * is allowed to request certain data, or submit a booking (required booking number) 
+    * a superuser
+
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Technologies Used
+
+* [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    * Flask was used to handle the templating for the site.
+
+* [Postgres](https://www.postgresql.org/)
+    * Postgres was the relational database used to store all user data, logins and data entries from the users.
+
+* [pip](https://pip.pypa.io/en/stable/)
+    * Pip is the package installer for Python, allowing us to install the packages we need for this site.
+
+* [pipenv](https://pipenv.pypa.io/en/latest/)
+    * I used pipenv to easily setup my working environment. In order to run my project, start by running the virtual environment with `pipenv shell`, then use `python manage.py runserver`
+
+* [Jinja](https://www.palletsprojects.com/p/jinja/)
+    * Jinja is a templating engine for Python, used to write Flask and other templating languages. I had used this to extend certain files and enable for block content to be changed.
+
+* [Git](https://git-scm.com/)
+    * Git was used for version control, editing and saving commits to push them to the repository that my project was hosted on, allowing for a history of commits to be viewed.
+
+* [Bootstrap 5](https://getbootstrap.com/)
+    * Bootstrap was used for all the layout and general styling of my website, allowing my attention and focus within production to stay on the functionality and logic of my work.
+
+* [Chrome](https://www.google.com/intl/en_uk/chrome/)
+    * My project was created with chrome, and chrome dev tools were used in the production of my project.
+
+* [Heroku](https://devcenter.heroku.com/)
+    * Heroku is where I have deployed the final and live version of my project. 
+
+* [GitHub](https://github.com/)
+    * GitHub is where all the code and commits to my project are stored.
+
+* [Google Fonts:](https://fonts.google.com/)
+    * Google fonts were used to import the fonts into the style.css file which is used throughout the whole project (maintains a certain style).
+
+* [Font Awesome:](https://fontawesome.com/)
+    * Font Awesome was used on The final score box for the finish icons and the time icon within the game area, and tick and cross icons.
+
+* [Balsamiq:](https://balsamiq.com/)
+    * Balsamiq was used to create the [wireframes](/readmeimages/wireframes/) during the design process.
+
+
+### Resources Used
+
+
+-   I have used the W3 [HTML](https://validator.w3.org/#validate_by_input) and [CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) validator, the [CI Linter] (https://pep8ci.herokuapp.com/) and occasionally the [W3Schools](https://www.w3schools.com/) resources when I had an issues.
+
+-   For testing my website on different screen sizes, I used Google Chrome Dev Tools.
+
+-   For testing my website on IOS, I used the app that I deployed to heroku to view and play around with it.
+
+-   For styling inspiration, I used [ColorMind](http://colormind.io/bootstrap/)
+
+-   For font styles, I used [Google Fonts](https://fonts.google.com/)
+
+-   Colours were all checked with [Contrast Grid](https://contrast-grid.eightshapes.com/)
+
+-   To create the favicons I used [Favicon.io](https://favicon.io/favicon-generator/)
+
+-   To create the mobile responsiveness and look of the website, I used [Bootstrap](https://getbootstrap.com/)
+
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. In addition to this, I used Chrome Dev tools very often to play around with the code and test when I was having issues. I found this was extremely important when troubleshooting issues- as I could change the code and see the changes live, instead of having to save the file and force refresh (If I changed the CSS code). I had also used print statements to see what data was being submitted from my functions, and to troubleshoot certain issues I was having. 
+
+The use of chrome dev tools allowed me to play around with the breakpoints for different screen sizes, and allowed me to view errors within the console when playing around with my website. 
+
+## HTML Results
+
+-   [W3C Markup Validator](https://validator.w3.org/)
+-   [index.html Results](/readmeimages/html-validation.png)
+
+## CSS Results
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+-   [style.css Results](/readmeimages/css-validation.png)
+
+## Python Resutls
+-   [CI Python Linter](https://pep8ci.herokuapp.com/)
+-   [Python Results](#)
+
+
+## Lighthouse Reports
+
+-   Lighthouse Report for Desktop - [View](/readmeimages/desktop-lighthouse.png)
+
+-   Lighthouse Report for Mobile - [View](/readmeimages/mobile-lighthouse.png)
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### First Time Visitor Goals
+
+    1. As a First Time Visitor, I want to be able to easily navigate the website, and register an account.
+
+        1. When entering the website, the user is instantly shown a "Register and book now" button, allowing them to create an account.
+        2. A register button is also displayed within the nav bar, for easy access.
+
+    2. As a First Time Visitor, I want a simple and easy and UI that is fully functional and gives me the choice to book a session once logged in.
+
+        1. This website is designed to be easy to navigate, and shows the user different things based upon their authentication status. This allows for the user to view a "Book Now" button which will replace the register button.
+        2. There is an option to book inside the nav bar too, yet again proving easy for the user to navigate to the area they would like.
+
+    3. As a First Time Visitor, I want to see the dates that are available for personal training sessions.
+
+        1. When navigating to the booking page, the dates are easy to view for a user to book.
+        2. The user can also only view dates that aren't currently booked by somebody, making it streamlined from a user standpoint.
+
+    4. When visiting the website for the first time, I want to be able to book a session and view my bookings easily.
+        1. This is simple to do as there is emphasis on booking, and the button is never taken away from the user on any page- as it is in the nav bar.
+        2. The "my bookings" button is also always within the nav bar if the user is logged in.
+
+     5. Any First time user would like to check when their bookings are for, easily accessed by a dropdown menu.
+        1. The nav bar is always displayed for the user to view, and when clicking the "my bookings" button it shows them all of their upcoming, past or todays bookings.
+        2. This information is compacted into links within the nav bar, inside of a simple dropdown button.
+    
+    6.  As a first Time Visitor, I want the process of booking a session to be as intuitive as possible. 
+        1. This process is extremely simple as it goes: Book a session -> Finalise Booking -> My Bookings.
+
+-   #### Returning Visitor Goals
+
+    1. As a Returning Visitor, I want to be able to easily login.
+
+        1. The login button is always displayed within the nav bar, allowing for any user to simply log back into their account.
+
+    2. As a Returning Visitor, I want to be able to view my upcoming sessions.
+
+        1. This is possible to view within the "upcoming bookings" section of the "My Bookings" page. This displays to the user the date of their booking, and what it is for.
+
+    3. As a Returning Visitor, I want a simple UI that is easy to navigate and easy on the eye.
+        1. A returning visitor will be quite familiar with the layout of the website and due to the process being simple for them to book a session, it should reduce the time spent looking for the information and more time spent on the bookings.
+        2. I have used specific blue buttons to guide the user through the process they desire through the website i.e booking a session.
+
+-   #### Frequent User Goals
+
+    1. As a Frequent User, I want the website to remember my details so that I can login.
+        1. This is possible using the "remember me" checkbox when logging in.
+
+    2. As a Frequent User, I want to be able to check my previous bookings and future bookings.
+        1. This is possible within the my bookings section, saving all previous and future bookings for the user to view.
+
+    3. As a Frequent User, I want the creator of my website to be able to see when I am booked in for.
+        1. This is easily possible as there is a front end view of all bookings for a superuser to see.
+        2. This section shows the superuser all bookings within the website, and the user's name.
+        
+    4. As a Frequent User, I want the booking process to be as easy as possible.
+        1. As stated previously, the booking process is extremely simple for a frequent user to do- as all buttons have emphasis for finalising a booking.
+
+### Further Testing
+
+-   I tested my website on many different screen sizes using the inspect element web tool, which allowed for me to test specific breakpoints and the layout on different hardware.
+-   I tested my website on Google chrome and Safari, as these browsers interacted differently and I had to plan accordingly by editing features for IOS.
+-   I had tested all booking functions for mobile, and used different screen sizes so that I could create the layout accordingly.
+-   I allowed my friends to test my booking functionality, account creation and authentication on the deployed project. This allowed me to fix bugs that they had found, as most of my time was spent developing the website.
+-   I used Google Chrome Dev Tools to play around with css attributes to see a live display of the changes I made. This also displayed errors to me in the console, giving me an insight into why my website wasn't displaying correctly.
+
+### Manual Testing
+
+<!-- -    In this section, I will provide screenshots of tests I have done to ensure my project is fully functional with no bugs apparent to the user.
+
+[Register and Book A Session Screenshot](readmeimages/start-btn-ss.png) This screenshot is relatively simple, and this is to test if the button that is clicked redirects the user to the regsiter screen, furthermore I have tested to see if this button, once clicked, changes to "Book a session" when the user is authenticated.
+
+[No Answer Selected Test Screenshot](readmeimages/manual-test-game1.png) This screenshot shows what the user is displayed when the timer runs out, I have tested this by allowing the timer to count down to 0- for me to see the results that occur. The results that occur from allowing this to happen are fully functional, showing: Correct answer displayed however no tick icon (as the user did not get it correct), counter stays at 0 and doesn't decrease into the negative numbers, progress bar reaches 100% of the game area, and the next button is displayed. 
+
+[Question Of Counter Test Screenshot](readmeimages/manual-test-game2.png) This screenshot tests if the question of number is functionable. I tested this by simply clicking the next button from the previous screenshot, with the result being 2 instead of one, due to the question being the second displayed.
+
+[Incorrect Answer Test Screenshot](readmeimages/game-box-active-ss.png) I tested the result of an incorrect answer by simply choosing one. The result expected is the incorrect answer to not add a number onto the final score and be displayed in red to signify incorrect.
+
+[Final Score Test Screenshot](readmeimages/final-score-ss.png) I have tested if the final score functions by going through the quiz and selecting some correct answers and some incorrect answers. This allowed me to test the functionality of the final score counter- as it would change depending on the user's score. Moreover, I had also tested wether this box was displayed after the 10th question, by clicking next on the final question, of which it was. 
+
+Furthermore, I tested the start again button by clicking it, of which restarted the counter and set the user back to the first question where all elements were displayed correctly. Finally, the quit game button also functions correctly and was tested by clicking it, and the result being taking the user back to the start button.  -->
+
+### Known Bugs
+<!-- 
+-   When developing the quiz box to display on mobiles, the information presented was all clustered and I had to copy previous code I had created in the CSS to redefine the size, however this was a tedious bug that took me a couple of hours to figure out after playing around with Dev Tools.
+-   There was a bug where the progress bar was too big for the screen size, causing the game area box to stretch.
+-   I had another tedious bug where once the time was up on my game, the next button would not display. In order to fix this I had to play around with the JS and I figured out that when calling the function, I had used the incorrect name. This was an easy bug to fix after I had isolated the issue.  -->
+
+## Deployment
+
+### Heroku
+
+To deploy this project, I have used Heroku.
+The deployed version is the same as in the repository.
+These are the steps used for deployment to Heroku:
+1. In the console of the software you are using, inside the root directory of the project, run:
+    pip3 freeze --local > requirements.txt
+    to create a requirements.txt file containing project dependencies.
+2. In the project workspace root directory, create a new file called Procfile, with a capital 'P'.
+    Open the Procfile. Inside the file, check that web: python3 app.py has been added when creating the file
+    Save the file.
+3. Login to Heroku, select create new app, add the desired name for your app, make sure not to have any spaces, choose your closest region.
+4. Navigate to the Deploy tab on Heroku dashboard and select Github, search for your repository and click 'connect'.
+5. Navigate to the settings tab, click reveal config vars and input in the following:
+
+| Key | Value |
+| :---: | :---: |
+| API_KEY | myapikey |
+| API_SECRET | myapisecret |
+| IP | 0.0.0.0 |
+| PORT | 8000 |
+| CLOUDINARY_URL | cloudinaryURL |
+| SECRET_KEY | mysecretkey |
+| DATABASE_URL | postgresql |
+
+6. Go back to the Deploy tab and select enable automatic deploys
+7. Click deploy branch
+8. Click Open app once the build is complete
+
+## Local Development
+* How to Fork To fork the repository, use the following steps:
+Login or signup to Github and locate the repository.
+Click the Fork button in the top right corner
+## Making Local Clone
+Login or signup to GitHub and locate the GitHub Repository GitHub Repository.
+Under the repository name, click "clone" or "download".
+To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+Open the terminal in your preferred code editor and change the current working directory to the location you want to use for the cloned directory.
+Type git clone, and then paste the URL you copied in Step 3.
+Press Enter. Your clone will be created.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/bodthegod/bod-workout)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/bodthegod/bod-workout)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/bodthegod/bod-workout
 ```
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/bodthegod/bod-workout
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
----
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-Happy coding!
+## Credits
+
+-   To troubleshoot problems I had when defining media queries, I used [Stack Overflow](https://stackoverflow.com/questions/21441993/media-queries-doesnt-work)
+-   Credits to my mentor Darío for encouraging me to continue to add things to improve my project.
+-   Credits to this John Abdsho Khosrowabadi on inspirations of how to build my project [Dev Genius](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
+-   Credits to this website for minimalist designs [Awwwards](https://www.awwwards.com/websites/minimal/)
