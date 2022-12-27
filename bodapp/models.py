@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 
 class Booking(models.Model):
     """
-    Model for Bookings, all choices 
-    and date options with generated 
+    Model for Bookings, all choices
+    and date options with generated
     booking number
     """
     booking_number = models.CharField(
