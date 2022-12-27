@@ -105,7 +105,7 @@ This is my personal training booking website, where users can select dates of wh
 
     -   Register Page Desktop Wireframe - [View](/readmeimages/wireframes/register-desktop.png)
 
-    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.png)
+    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.pngregister-mobile.png)
 
     -   Login Page Desktop Wireframe - [View](/readmeimages/wireframes/signin-desktop.png)
 
@@ -114,10 +114,6 @@ This is my personal training booking website, where users can select dates of wh
     -   Logout Page Desktop Wireframe - [View](/readmeimages/wireframes/sign-out-desktop.png)
 
     -   Logout Page Mobile Wireframe - [View](/readmeimages/wireframes/sign-out-mobile.png)
-
-    -   Register Page Desktop Wireframe - [View](./readmeimages/wireframes/register-desktop.png)
-
-    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.png
 
     -   Booking Page Desktop Wireframe - [View](/readmeimages/wireframes/booking-page-desktop.png)
 
