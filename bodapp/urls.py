@@ -15,5 +15,8 @@ urlpatterns = [
          views.booking_detail, name='booking_detail'),
     path('delete_booking/<booking_number>',
          views.delete_booking, name='delete_booking'),
+    path('edit_booking/<booking_number>',
+         views.edit_booking, name='edit_booking'),
+    path('edit_success', views.edit_success, name='edit_success'),
     path('account_panel', views.account_panel, name='account_panel'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
