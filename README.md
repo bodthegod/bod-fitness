@@ -494,5 +494,5 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 -   To troubleshoot problems I had when defining media queries, I used [Stack Overflow](https://stackoverflow.com/questions/21441993/media-queries-doesnt-work)
 -   Credits to my mentor Darío for encouraging me to continue to add things to improve my project.
--   Credits to this John Abdsho Khosrowabadi on inspirations of how to build my project [Dev Genius](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
+-   Credits to this John Abdsho Khosrowabadi on inspirations of how to build my project [Dev Genius](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78), the function to loop through days was inspired by this project, and how to check if a day was selected. Initially I tried to take more inspiration from this project however my logic and functionality didn't work with the code written, so I had created my own.
 -   Credits to this website for minimalist designs [Awwwards](https://www.awwwards.com/websites/minimal/)
