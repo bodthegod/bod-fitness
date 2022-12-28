@@ -32,7 +32,6 @@ datetime = "*"
 timedelta = "*"
 autopep8 = "*"
 gunicorn = "*"
-django-admin-interface = "*"
 whitenoise = "*"
 
 [dev-packages]
