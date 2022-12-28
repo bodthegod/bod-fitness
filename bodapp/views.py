@@ -228,6 +228,15 @@ def edit_booking(request, booking_number):
         return redirect('edit_success')
 
     return render(request, template, context)
+
+
+def edit_success(request):
+    """
+    Renders edit success page
+    """
+    return render(request, 'booking/edit_success.html', {})
+
+
 @login_required
 def delete_booking(request, booking_number):
     """
