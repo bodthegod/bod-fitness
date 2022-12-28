@@ -411,6 +411,7 @@ I have tested all of these functions on both an admin view, and a superuser view
 `ACCOUNT_EMAIL_VERIFICATION = "none"`
 This fixed the errors I was getting and allows the user to input their email and be correctly redirected to the home page. 
 -   I have fixed a bug where the view all bookings page was not working as intended, as the data inside the database was not displaying. This took me about 4-5 hours in testing and bugfixing to find a workaround, however I managed to fix it by redefining how the data was displaying within the HTML files.
+-   Naming conventions on cloudinary and local are different, as cloudinary assigns the image URL links to have `.png.png` at the end of the URL, if the image is defined as a URL. This means that when hosting locally, a user would not be able to view the correct favicons due to cloudinary's naming conventions, and poor technology. This was a frustrating bug to find a workaround, which lead to me removing the `.png` in my media link tags.
 ## Deployment
 
 ### Heroku
