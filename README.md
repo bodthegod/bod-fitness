@@ -107,7 +107,7 @@ This is my personal training booking website, where users can select dates of wh
 
     -   Register Page Desktop Wireframe - [View](/readmeimages/wireframes/register-desktop.png)
 
-    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.pngregister-mobile.png)
+    -   Register Page Mobile Wireframe - [View](/readmeimages/wireframes/register-mobile.png)
 
     -   Login Page Desktop Wireframe - [View](/readmeimages/wireframes/signin-desktop.png)
 
@@ -150,6 +150,7 @@ This is my personal training booking website, where users can select dates of wh
 
 -   If the user selects the button that redirects them to the "My bookings" page, this is where they can Read, Update or Delete their created records that were added to the database.
 
+-   Due to time constraints and bugfixing, I hadn't implemented the user interface to edit bookings, however there is full functionality for an admin to edit any booking, and change the entries apart from the unique booking number. Users can delete any of their own entries, and admins can delete any entry made by a user.
 
 ### Features Importance Table
 
@@ -157,7 +158,7 @@ When first implementing the features for this website, I had brainstormed ideas 
 
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
-| 1 | Create, View, Update and Delete Bookings | 5 | 5 |
+| 1 | Create, View, and Delete Bookings | 5 | 5 |
 | 2 | Login, Logout and Register Functionality | 5 | 5 |
 | 3 | View My Bookings as a User | 5 | 5 |
 | 4 | View All Bookings as an Admin | 5 | 5 |
@@ -411,7 +412,7 @@ I have tested all of these functions on both an admin view, and a superuser view
 `ACCOUNT_EMAIL_VERIFICATION = "none"`
 This fixed the errors I was getting and allows the user to input their email and be correctly redirected to the home page. 
 -   I have fixed a bug where the view all bookings page was not working as intended, as the data inside the database was not displaying. This took me about 4-5 hours in testing and bugfixing to find a workaround, however I managed to fix it by redefining how the data was displaying within the HTML files.
--   Naming conventions on cloudinary and local are different, as cloudinary assigns the image URL links to have `.png.png` at the end of the URL, if the image is defined as a URL. This means that when hosting locally, a user would not be able to view the correct favicons due to cloudinary's naming conventions, and poor technology. This was a frustrating bug to find a workaround, which lead to me removing the `.png` in my media link tags.
+-   Naming conventions on cloudinary and local are different, as cloudinary assigns the image URL links to have `.png.png` at the end of the URL, if the image is defined as a png. This means that when hosting locally, a user would not be able to view the correct favicons due to cloudinary's naming conventions, and poor technology. This was a frustrating bug to find a workaround, which lead to me removing the `.png` in my media link tags.
 ## Deployment
 
 ### Heroku
