@@ -25,3 +25,59 @@
                 Strength Gain 
                 {% endif %}</h3>
                 </div>
+                <div class="col-md-6">
+                    <h2 class="text-black mt-2">Change advice topic:</h2>
+                    <select name="advice" class="p-2" id="advice">
+                        {% if booking.advice == 1 %}
+                        <option value="1" selected>Weight Gain</option>
+                        <option value="2">Weight Loss</option>
+                        <option value="3">Endurance</option>
+                        <option value="4">Strength Gain</option>
+                        {% elif booking.advice == 2 %}
+                        <option value="1">Weight Gain</option>
+                        <option value="2" selected>Weight Loss</option>
+                        <option value="3">Endurance</option>
+                        <option value="4">Strength Gain</option>
+                        {% elif booking.advice == 3 %}
+                        <option value="1">Weight Gain</option>
+                        <option value="2">Weight Loss</option>
+                        <option value="3" selected>Endurance</option>
+                        <option value="4">Strength Gain</option>
+                        {% else %}
+                        <option value="1">Weight Gain</option>
+                        <option value="2">Weight Loss</option>
+                        <option value="3">Endurance</option>
+                        <option value="4" selected>Strength Gain</option>
+                        {% endif %}
+                    </select>
+                    </select>
+                </div>
+      </div>
+      <div class="row mb-4 g-3">
+        <div class="col-md-6">
+            <h2 class="text-black mt-2">Currently selected booking topic:</h2>
+            <h3>{% if booking.choice == 1 %} 
+                Online
+                {% elif booking.choice == 2 %}
+                In Person
+               {% endif %}</h3>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-black mt-2">Change advice topic:</h2>
+                    <select name="choice" class="p-2" id="choice">
+                        {% if booking.choice == 1 %}
+                        <option value="1" selected>Online</option>
+                        <option value="2">In Person</option>
+                        {% else %}
+                        <option value="1">Online</option>
+                        <option value="2" selected>In Person</option>
+                        {% endif %}
+                    </select>
+                    </select>
+                </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg px-4 gap-3 mb-5" id="editbooking" disabled>Edit Booking</button>
+  </form>
+</div>
+</div>
+</div>
