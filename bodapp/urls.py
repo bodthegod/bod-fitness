@@ -18,4 +18,4 @@ urlpatterns = [
     path('edit_booking/<booking_number>',
          views.edit_booking, name='edit_booking'),
     path('account_panel', views.account_panel, name='account_panel'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
