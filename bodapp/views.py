@@ -208,6 +208,27 @@ def booking_detail(request, booking_number):
 
 
 @login_required
+def edit_booking(request, booking_number):
+    """
+    Allows for booking deletion
+    """
+    booking = get_object_or_404(Booking,
+                                booking_number=booking_number)
+    template = 'booking/edit_booking.html'
+    context = {
+        'booking': booking,
+    }
+
+    if request.method == 'POST':
+        booking.advice = request.POST.get('advice')
+        booking.choice = request.POST.get('choice')
+        booking.save()
+        messages.info(request, f'Booking with booking number {booking_number}\
+         has been successfully edited.')
+        return redirect('edit_success')
+
+    return render(request, template, context)
+@login_required
 def delete_booking(request, booking_number):
     """
     Allows for booking deletion
