@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from bodapp import views
 
 urlpatterns = [
@@ -14,5 +16,4 @@ urlpatterns = [
     path('delete_booking/<booking_number>',
          views.delete_booking, name='delete_booking'),
     path('account_panel', views.account_panel, name='account_panel'),
-
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
