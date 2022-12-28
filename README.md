@@ -24,14 +24,16 @@
     6. [Features Importance Table](#features-importance-table)
     7. [Screenshots of Features](#screenshots-and-features-within-website)
     8. [Structure](#structure)
+    9. [CRUD Table](#crud-table)
 3. [Languages and Resources](#languages-used)
 4. [Techologies Used](#technologies-used)
 5. [Testing](#testing)
-    1. [HTML Validator Results](#html-results)
-    2. [CSS Validator Results](#css-results)
-    3. [Lighthouse Reports](#lighthouse-reports)
-    4. [Further Testing](#further-testing)
-    5. [Manual Testing](#manual-testing)
+    1. [Testing User Stories](#testing-user-stories-from-user-experience-ux-section)
+    2. [HTML Validator Results](#html-results)
+    3. [CSS Validator Results](#css-results)
+    4. [Lighthouse Reports](#lighthouse-reports)
+    5. [Further Testing](#further-testing)
+    6. [Manual Testing](#manual-testing)
 6. [Bugs and fixes](#known-bugs)
 7. [Deployment](#deployment)
     1. [Heroku](#heroku)
@@ -294,22 +296,31 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 ## HTML Results
 
 -   [W3C Markup Validator](https://validator.w3.org/)
--   [index.html Results](/readmeimages/html-validation.png)
+-   [index.html Results](/readmeimages/index-html-validation.PNG)
+-   [booking.html Results](/readmeimages/booking-html-validation.PNG)
+-   [createdbookings.html Results](/readmeimages/created-bookings-html-validation.PNG)
+-   [finalisebooking.html Results](/readmeimages/finalise-booking-validation.PNG)
+-   [about.html Results](/readmeimages/why-me-html-validation.PNG)
+-   [Sign In HTML Results](/readmeimages/login-html-validation.PNG)
+-   [Sign Out HTML Results](/readmeimages/signout-html-validation.PNG)
+-   [Register HTML Results](/readmeimages/register-html-validation.PNG)
+-   When validating my HTML code, I used chrome dev tools to grab the code without the templating language to remove errors. This allowed me to validate all of the code when it was fully rendered, and when being extended from base.html.
 
 ## CSS Results
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
--   [style.css Results](/readmeimages/css-validation.png)
+-   [style.css Results](/readmeimages/jigsaw-validation.PNG)
 
 ## Python Resutls
 -   [CI Python Linter](https://pep8ci.herokuapp.com/)
--   [Python Results](#)
+-   [Python Results](/readmeimages/python-validation.PNG)
+-   I have validated all python files, however I could not include all of these in screenshots. All python files passed through the linter.
 
 
 ## Lighthouse Reports
 
--   Lighthouse Report for Desktop - [View](/readmeimages/desktop-lighthouse.png)
+-   Lighthouse Report for Desktop - [View](/readmeimages/lighthouse-desktop.PNG)
 
--   Lighthouse Report for Mobile - [View](/readmeimages/mobile-lighthouse.png)
+-   Lighthouse Report for Mobile - [View](/readmeimages/lighthouse-mobile.PNG)
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -380,26 +391,26 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 
 ### Manual Testing
 
-<!-- -    In this section, I will provide screenshots of tests I have done to ensure my project is fully functional with no bugs apparent to the user.
+-    In this section, I will provide screenshots of tests I have done to ensure my project is fully functional with no bugs apparent to the user.
 
-[Register and Book A Session Screenshot](readmeimages/start-btn-ss.png) This screenshot is relatively simple, and this is to test if the button that is clicked redirects the user to the regsiter screen, furthermore I have tested to see if this button, once clicked, changes to "Book a session" when the user is authenticated.
+[Register and Book A Session Test Screenshot](/readmeimages/register-home-ss.PNG) This screenshot is relatively simple, and this is to test if the button that is clicked redirects the user to the regsiter screen, furthermore I have tested to see if this button, once clicked, changes to "Book a session" when the user is authenticated.
 
-[No Answer Selected Test Screenshot](readmeimages/manual-test-game1.png) This screenshot shows what the user is displayed when the timer runs out, I have tested this by allowing the timer to count down to 0- for me to see the results that occur. The results that occur from allowing this to happen are fully functional, showing: Correct answer displayed however no tick icon (as the user did not get it correct), counter stays at 0 and doesn't decrease into the negative numbers, progress bar reaches 100% of the game area, and the next button is displayed. 
+[Booking Test Screenshot](readmeimages/booking-ss.PNG) This screenshot shows the booking process, and how it displays information to the user. The user is shown the next monday, tuesday and wednesday within the next 7 days and when these are chosen, it disables the option to book as the sessions are all fully booked. 
 
-[Question Of Counter Test Screenshot](readmeimages/manual-test-game2.png) This screenshot tests if the question of number is functionable. I tested this by simply clicking the next button from the previous screenshot, with the result being 2 instead of one, due to the question being the second displayed.
+[Finalise Booking Screenshot](readmeimages/finalise-ss.PNG) This screenshot tests wether the booking functionality fully works, as the booking submit button from the previous page was clicked, and the user is redirected to the finalise booking screen with all the informaiton they have submitted. This works correctly and all of the data is correct- with a unique booking number being assigned to the users booking.
 
-[Incorrect Answer Test Screenshot](readmeimages/game-box-active-ss.png) I tested the result of an incorrect answer by simply choosing one. The result expected is the incorrect answer to not add a number onto the final score and be displayed in red to signify incorrect.
+[My Booking Test Screenshot](readmeimages/my-bookings-ss.PNG) I tested the functionality of the "my bookings" page by submitting a booking, and looking if it has been assigned to an upcoming, past or today slot. This functions correctly as all bookings that I have made were displayed.
 
-[Final Score Test Screenshot](readmeimages/final-score-ss.png) I have tested if the final score functions by going through the quiz and selecting some correct answers and some incorrect answers. This allowed me to test the functionality of the final score counter- as it would change depending on the user's score. Moreover, I had also tested wether this box was displayed after the 10th question, by clicking next on the final question, of which it was. 
+[Delete Function Test](readmeimages/delete-function-ss.PNG) I have tested if I can delete records from the front end by clicking the delete booking button, this displays a message asking "are you sure you want to delete this", and I click yes. The booking from today was then deleted as displayed within this screenshot- as it is no longer displayed and the booking availability will open up for that day again.
 
-Furthermore, I tested the start again button by clicking it, of which restarted the counter and set the user back to the first question where all elements were displayed correctly. Finally, the quit game button also functions correctly and was tested by clicking it, and the result being taking the user back to the start button.  -->
+I have tested all of these functions on both an admin view, and a superuser view- which give different outcomes as I have allowed superusers to view every user booking, and users to only be able to see their own bookings. All functionality works as intended and there are no more bugs that I am aware of.
 
 ### Known Bugs
-<!-- 
--   When developing the quiz box to display on mobiles, the information presented was all clustered and I had to copy previous code I had created in the CSS to redefine the size, however this was a tedious bug that took me a couple of hours to figure out after playing around with Dev Tools.
--   There was a bug where the progress bar was too big for the screen size, causing the game area box to stretch.
--   I had another tedious bug where once the time was up on my game, the next button would not display. In order to fix this I had to play around with the JS and I figured out that when calling the function, I had used the incorrect name. This was an easy bug to fix after I had isolated the issue.  -->
 
+-   When creating the full functionality of my website, I came across many bugs, one of these was the E-mail section of my signup form not functioning correctly, which would display an error. This took away from the user experience and after a few forum posts and google searches, I added this line of code to my `settings.py` file to fix it. `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+`ACCOUNT_EMAIL_VERIFICATION = "none"`
+This fixed the errors I was getting and allows the user to input their email and be correctly redirected to the home page. 
+-   I have fixed a bug where the view all bookings page was not working as intended, as the data inside the database was not displaying. This took me about 4-5 hours in testing and bugfixing to find a workaround, however I managed to fix it by redefining how the data was displaying within the HTML files.
 ## Deployment
 
 ### Heroku
