@@ -81,3 +81,17 @@
 </div>
 </div>
 </div>
+<script>
+    $('#editbookingform').change(function (element) {
+        const advice = $('#advice').val();
+        const choice = $('#choice').val();
+        const bookingAdvice = "{{ booking.advice }}"
+        const choiceAdvice = "{{ booking.choice }}"
+        if(advice != bookingAdvice || choice != choiceAdvice){
+            $('#editbooking').removeAttr("disabled");
+        } else {
+            $('#editbooking').attr("disabled", "disabled");
+        }
+    });
+</script>
+{%endblock%}
