@@ -158,7 +158,7 @@ When first implementing the features for this website, I had brainstormed ideas 
 
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
-| 1 | Create, View, and Delete Bookings | 5 | 5 |
+| 1 | Create, View and Delete Bookings | 5 | 5 |
 | 2 | Login, Logout and Register Functionality | 5 | 5 |
 | 3 | View My Bookings as a User | 5 | 5 |
 | 4 | View All Bookings as an Admin | 5 | 5 |
