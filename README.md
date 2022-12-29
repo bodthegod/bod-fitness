@@ -137,6 +137,15 @@ This is my personal training booking website, where users can select dates of wh
 
     -   Why Us Page Mobile Wireframe - [View](/readmeimages/wireframes/whyus-mobile.png)
 
+    -   Edit Booking Desktop Wireframe - [View](/readmeimages/wireframes/edit-booking-desktop-wireframe.png
+
+    -   Edit Booking Mobile Wireframe - [View](/readmeimages/wireframes/edit-booking-mobile-wireframe.png)
+
+    -   Edit Success Desktop Wireframe - [View](/readmeimages/wireframes/edit-success-desktop-wireframe.png)
+
+    -   Edit Success Mobile Wireframe - [View](/readmeimages/wireframes/edit-success-mobile-wireframe.png)
+
+
 
     ## Features
 
@@ -150,15 +159,14 @@ This is my personal training booking website, where users can select dates of wh
 
 -   If the user selects the button that redirects them to the "My bookings" page, this is where they can Read, Update or Delete their created records that were added to the database.
 
--   Due to time constraints and bugfixing, I hadn't implemented the user interface to edit bookings, however there is full functionality for an admin to edit any booking, and change the entries apart from the unique booking number. Users can delete any of their own entries, and admins can delete any entry made by a user.
-
+-   Due to time constraints and bugfixing, I hadn't implemented the admin front end interface to edit bookings, however a user can access all of this functionality for their own bookings. This allows for full CRUD functionality for the user.
 ### Features Importance Table
 
 When first implementing the features for this website, I had brainstormed ideas and the importance that they would have on the User Experience when browsing my website, this is a brief features importance table:
 
 | # | Feature | Importance | Viability |
 | --- | --- | --- | --- |
-| 1 | Create, View and Delete Bookings | 5 | 5 |
+| 1 | Create, View, Update and Delete Bookings | 5 | 5 |
 | 2 | Login, Logout and Register Functionality | 5 | 5 |
 | 3 | View My Bookings as a User | 5 | 5 |
 | 4 | View All Bookings as an Admin | 5 | 5 |
@@ -203,6 +211,7 @@ This shows what CRUD functionality is available from each page
 | created_booking |  | requires superuser, view all booking data for all users (admin panel) | edit booking data | delete any booking from database |
 | register | user profile |  |  |  |
 | login |  | login with username and password |   |  |  |
+| edit_booking |  | view booking data | edit booking data  |  |  |
 
 
 ### Defensive Programming
@@ -224,6 +233,8 @@ In order to keep my website secure and effective at keeping malicious attempts p
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Technologies Used
 
@@ -272,7 +283,7 @@ In order to keep my website secure and effective at keeping malicious attempts p
 ### Resources Used
 
 
--   I have used the W3 [HTML](https://validator.w3.org/#validate_by_input) and [CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) validator, the [CI Linter] (https://pep8ci.herokuapp.com/) and occasionally the [W3Schools](https://www.w3schools.com/) resources when I had an issues.
+-   I have used the W3 [HTML](https://validator.w3.org/#validate_by_input) and [CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) validator, the [CI Linter](https://pep8ci.herokuapp.com/), [JShint](https://jshint.com/) and occasionally the [W3Schools](https://www.w3schools.com/) resources when I had an issues.
 
 -   For testing my website on different screen sizes, I used Google Chrome Dev Tools.
 
@@ -305,6 +316,8 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 -   [Sign In HTML Results](/readmeimages/login-html-validation.PNG)
 -   [Sign Out HTML Results](/readmeimages/signout-html-validation.PNG)
 -   [Register HTML Results](/readmeimages/register-html-validation.PNG)
+-   [Edit HTML Results](/readmeimages/edit-html-validation.PNG)
+-   [Edit Success HTML Results](/readmeimages/edit-success-html-validation.PNG)
 -   When validating my HTML code, I used chrome dev tools to grab the code without the templating language to remove errors. This allowed me to validate all of the code when it was fully rendered, and when being extended from base.html.
 
 ## CSS Results
@@ -315,6 +328,10 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 -   [CI Python Linter](https://pep8ci.herokuapp.com/)
 -   [Python Results](/readmeimages/python-validation.PNG)
 -   I have validated all python files, however I could not include all of these in screenshots. All python files passed through the linter.
+## JS Resutls
+-   [JShint](https://jshint.com/)
+-   [JS Results](/readmeimages/jshint-validation.PNG)
+-   I have validated the JS code that is inline on my edit page.
 
 
 ## Lighthouse Reports
@@ -403,6 +420,10 @@ The use of chrome dev tools allowed me to play around with the breakpoints for d
 [My Booking Test Screenshot](readmeimages/my-bookings-ss.PNG) I tested the functionality of the "my bookings" page by submitting a booking, and looking if it has been assigned to an upcoming, past or today slot. This functions correctly as all bookings that I have made were displayed.
 
 [Delete Function Test](readmeimages/delete-function-ss.PNG) I have tested if I can delete records from the front end by clicking the delete booking button, this displays a message asking "are you sure you want to delete this", and I click yes. The booking from today was then deleted as displayed within this screenshot- as it is no longer displayed and the booking availability will open up for that day again.
+
+[Edit Booking Test](readmeimages/edit-ss.PNG) I have tested all of the options that a user can select in order to edit their booking, and I have selected all options in order to manually test this. Initially I had bugs where the incorrect options were displaying, such as Strength Gain. I eventually solved this by changing the HTML file that it was stored in. 
+
+[Edit Success Test](readmeimages/edit-success-ss.PNG) I have tested this page by confirming the edit of my booking, and it functions correctly- allowing the user to see that their edit was successful.
 
 I have tested all of these functions on both an admin view, and a superuser view- which give different outcomes as I have allowed superusers to view every user booking, and users to only be able to see their own bookings. All functionality works as intended and there are no more bugs that I am aware of.
 
