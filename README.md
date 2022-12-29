@@ -137,7 +137,7 @@ This is my personal training booking website, where users can select dates of wh
 
     -   Why Us Page Mobile Wireframe - [View](/readmeimages/wireframes/whyus-mobile.png)
 
-    -   Edit Booking Desktop Wireframe - [View](/readmeimages/wireframes/edit-booking-desktop-wireframe.png
+    -   Edit Booking Desktop Wireframe - [View](/readmeimages/wireframes/edit-booking-desktop-wireframe.png)
 
     -   Edit Booking Mobile Wireframe - [View](/readmeimages/wireframes/edit-booking-mobile-wireframe.png)
 
