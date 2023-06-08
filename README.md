@@ -238,7 +238,7 @@ In order to keep my website secure and effective at keeping malicious attempts p
 
 ### Technologies Used
 
-* [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
+* [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images whilst keeping the App safe and secure
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
     * Flask was used to handle the templating for the site.
